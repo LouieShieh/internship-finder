@@ -1,0 +1,20 @@
+# Personal settings and data: never commit these.
+config.toml
+*.xlsx
+*.xlsm
+my_*.txt
+output/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

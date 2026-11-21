@@ -1,0 +1,43 @@
+# Copy this file to config.toml and edit it. config.toml is ignored by git, so your file paths stay private.
+# Every setting is optional; command-line flags override what is here. Relative paths are relative to this file.
+#
+# 把这个文件复制成 config.toml 再修改。git 会忽略 config.toml，你的文件路径不会被公开。
+# 每一项都可以不写；命令行参数会覆盖这里的设置。相对路径以这个文件所在的文件夹为准。
+
+[search]
+year = 2027              # the internship summer / 实习所在的暑期
+days = 14                # only roles posted in the last N days / 只看最近 N 天发布的岗位
+max_per_company = 2      # hide a company once you have this many applications there / 在一家公司投满这么多个就隐藏它
+check_jd = 0             # read the top N job descriptions and flag restrictions (try 20) / 读前 N 个 JD 并标出限制（可以试 20）
+# sources = ["simplify", "vansh", "speedyapply", "automated"]
+
+[applied]
+# Your list of applications: .csv or .xlsx. It is only read, never changed.
+# Columns are found from the header (company / organization, title / position / role, url / link).
+# 你的投递表：.csv 或 .xlsx。只读，不会被修改。
+# 程序按表头找列（company / organization、title / position / role、url / link）。
+# path = "~/Documents/applications.xlsx"
+# sheet = "Tracker"      # part of the sheet name; default is the first sheet / 工作表名的一部分；默认用第一个工作表
+# header_row = 5         # default: found automatically in the first 30 rows / 默认在前 30 行里自动查找表头
+# first_data_row = 7     # default: the row after the header (skip a template's example row) / 默认是表头的下一行（可用来跳过模板里的示例行）
+# columns = { company = "D", title = "E", url = "F" }   # default: found from the header text / 默认按表头文字查找
+
+[filters]
+# Extra exclusion lists in the same format as internship_finder/data/excluded_companies.txt.
+# 额外的排除表，格式和 internship_finder/data/excluded_companies.txt 相同。
+# exclude_files = ["my_excluded_companies.txt"]
+# default_exclusions = true      # use the bundled list of companies that bar F-1 students / 使用内置的"不收 F-1"公司表
+# Your earliest and latest possible graduation dates. Postings whose graduation range leaves you out get a ⚠.
+# 你最早和最晚可能的毕业时间。岗位要求的毕业时间不包括你时，会标 ⚠。
+# graduation_window = ["2028-12", "2030-05"]
+# min_h1b_approvals = 0          # hide companies with fewer H-1B approvals (unmatched names count as 0) / 隐藏 H-1B 批准数低于此值的公司（没匹配上的按 0 算）
+
+[h1b]
+# enabled = true
+# archive_years = [2022, 2023]                 # downloaded once from uscis.gov and cached / 从 uscis.gov 下载一次后缓存
+# csv = ["~/Downloads/h1b_fy2026.csv"]         # newer years you exported from the H-1B Employer Data Hub / 你从 H-1B Employer Data Hub 导出的较新年份
+
+[output]
+# dir = "output"
+# cache_dir = ".cache"
+# console_rows = 25                            # rows printed in the terminal / 终端里打印的行数
